@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: adobe-clean, adobe-clean-han-japanese, source-sans-pro,
+    Helvetica Neue, Helvetica, sans-serif;
+}
+body {
+  background-image: url(https://i.pinimg.com/originals/b5/77/67/b5776771bb3df8a4e8d61d1978304b2a.jpg);
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+}
+.content {
+  min-height: 60vh;
+  width: 25vw;
+  background-color: rgb(242, 157, 100);
+  border-radius: 12px;
+  border: 1.5px rgb(142, 124, 207) solid;
+  margin-left: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ner {
+  width: 90%;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5%;
+  margin-top: 5%;
+  background-color: rgb(242, 157, 100);
+}
+.input {
+  height: 50px;
+  width: 60%;
+
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 12px;
+  outline: none;
+  border: white 1.5px solid;
+  color: white;
+  background-color: rgb(242, 157, 100);
+  transition: 0.5s;
+}
+.input::placeholder {
+  color: white;
+}
+.back {
+  height: 50px;
+  width: 90%;
+  border-radius: 12px;
+  border: 1.5px solid white;
+  background-color: rgb(242, 157, 100);
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  transition: 0.5s;
+}
+.back:hover {
+  height: 60px;
+  margin-left: 2.5%;
+  cursor: pointer;
+  margin-bottom: 2.5%;
+  width: 95%;
+  font-size: 25px;
+  color: white;
+  text-shadow: 3px 3px 3px gray;
+}
+.input:hover {
+  height: 60px;
+  width: 65%;
+  background-color: white;
+  color: rgb(242, 157, 100);
+}
+.input:hover::placeholder {
+  transition: 0.5s;
+  color: rgb(242, 157, 100);
+}
+.button:hover {
+  height: 60px;
+  width: 35%;
+  background-color: white;
+  color: rgb(242, 157, 100);
+}
+.button {
+  transition: 0.5s;
+  border: white 1.5px solid;
+  border-radius: 12px;
+  color: white;
+  background-color: rgb(242, 157, 100);
+  height: 50px;
+  width: 30%;
+  font-size: 20px;
+  font-weight: 400;
+}
+.container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  padding: 15px;
+  justify-content: center;
+}
+.dyno {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  height: 350px;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: white;
+}
+::-webkit-scrollbar-track {
+  background: rgb(242, 157, 100);
+}
+.agenda {
+  font-size: 35px;
+  text-shadow: 2px 2px 2px #e0d918;
+  font-weight: 900;
+  color: white;
+  font-family: adobe-clean, adobe-clean-han-japanese, source-sans-pro,
+    Helvetica Neue, Helvetica, sans-serif;
+  transition: 0.5s;
+  margin-left: 22%;
+}
+
+.plan {
+  height: 50px;
+  min-width: 110px;
+  max-width: max-content;
+  border-radius: 12px;
+  /* border: white 1.5px solid;
+  background-color: rgb(242, 157, 100); */
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gadna {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  border-radius: 12px;
+  border: white 1.5px solid;
+  background-color: rgb(242, 157, 100);
+  padding: 5px;
+  /* transition: height 2s; */
+  gap: 10px;
+  align-items: center;
+  -moz-box-shadow: 0 0 10px #e0d918;
+  -webkit-box-shadow: 0 0 10px #e0d918;
+  box-shadow: 0 0 10px #e0d918;
+  transition: 0.5s;
+}
+.gadna1 {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  border-radius: 12px;
+  border: white 1.5px solid;
+  background-color: rgb(242, 157, 100);
+  padding: 5px;
+  /* transition: height 2s; */
+  gap: 10px;
+  align-items: center;
+  -moz-box-shadow: 0 0 10px #e0d918;
+  -webkit-box-shadow: 0 0 10px #e0d918;
+  box-shadow: 0 0 10px #e0d918;
+  transition: 0.5s;
+}
+.gadna:hover {
+  height: 80px;
+}
+
+.del {
+  background-image: url(https://cdn0.iconfinder.com/data/icons/user-experience-27/48/14_trash_can_rubbish_garbage_button_delete-512.png);
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+  cursor: pointer;
+}
+.edit {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/6324/6324968.png);
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  background-size: contain;
+}
+.comp {
+  background-image: url(https://png.pngtree.com/png-vector/20230508/ourmid/pngtree-yes-button-or-checkmark-logo-vector-png-image_7083024.png);
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  background-size: contain;
+  transition: 0.5s;
+}
+.complete {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+.dus {
+  font-size: 35px;
+  text-shadow: 2px 2px 2px #74ee10;
+  font-weight: 900;
+  color: white;
+  font-family: adobe-clean, adobe-clean-han-japanese, source-sans-pro,
+    Helvetica Neue, Helvetica, sans-serif;
+  transition: 0.5s;
+  margin-left: 26%;
+}
+.anhaar {
+  color: red;
+  font-size: 15px;
+}
+.shineI {
+  background-color: white;
+  outline: none;
+  width: 45%;
+  border: rgb(242, 157, 100) 1px solid;
+  border-radius: 12px;
+  color: rgb(242, 157, 100);
+  padding: 5px;
+}
+.duus {
+  background-color: white;
+  padding: 5px;
+  border: 0;
+  border-radius: 12px;
+  color: rgb(242, 157, 100);
+}

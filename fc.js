@@ -3,8 +3,10 @@ const number = document.getElementById("Number");
 const password = document.getElementById("Password");
 const btn = document.getElementById("btn");
 const clP = document.getElementById("clP");
+const clNer = document.getElementById("clNer");
 const clN = document.getElementById("clN");
 const clE = document.getElementById("clE");
+const ner = document.getElementById("Name");
 const alphabet = [
   "a",
   "b",
@@ -56,22 +58,29 @@ clN.addEventListener("click", function () {
 clE.addEventListener("click", function () {
   email.value = "";
 });
-
+clNer.addEventListener("click", function () {
+  ner.value = "";
+});
+let chuhal = 0;
 const uildel = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 function ValidEmail() {
   const EValue = email.value;
-
   if (EValue.includes("@")) {
     console.log("nice");
+    chuhal += 1;
   } else {
     alert("Your email is unvalid, your email must have @.");
   }
+}
+function ValidName() {
+  let NerValue = ner.value;
+  localStorage.setItem("sigma", NerValue);
 }
 function ValidNumber() {
   let NValue = number.value;
   let too = 0;
 
-  if (NValue.length === 7) {
+  if (NValue.length === 8) {
     for (let i = 0; i < alphabet.length; i++) {
       if (NValue.includes(alphabet[i])) {
         too += 1;
@@ -81,6 +90,7 @@ function ValidNumber() {
       alert("Your phone is invalid");
     } else {
       console.log("nice");
+      chuhal += 1;
     }
   } else {
     alert(
@@ -98,10 +108,16 @@ function ValidPass() {
         useg += 1;
       }
     }
+    if (useg > 0) {
+      chuhal += 1;
+    }
     for (i = 0; i < uildel.length; i++) {
       if (PValue.includes(uildel[i])) {
         too += 1;
       }
+    }
+    if (too > 0) {
+      chuhal += 1;
     }
   } else {
     alert("Your password is unvalid, it must have 8 total numbers and letters");
@@ -123,4 +139,9 @@ btn.addEventListener("click", function () {
   ValidEmail();
   ValidNumber();
   ValidPass();
+  ValidName();
+  if (chuhal == 4) {
+    window.location.href = "ToDo.html";
+  }
+  chuhal = 0;
 });
