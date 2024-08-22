@@ -35,6 +35,9 @@ const alphabet = [
   "y",
   "z",
 ];
+const parroli = "Montuul08";
+const sobaka = "jtjmgl09@gmail.com";
+const koshka = "95184503";
 const input1 = document.getElementsByClassName("input1")[0];
 const eye = document.getElementsByClassName("eye")[0];
 password.type = "none";
@@ -66,8 +69,12 @@ const uildel = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 function ValidEmail() {
   const EValue = email.value;
   if (EValue.includes("@")) {
-    console.log("nice");
-    chuhal += 1;
+    if (EValue == sobaka) {
+      console.log("nice");
+      chuhal += 1;
+    } else {
+      alert("Your email is wrong");
+    }
   } else {
     alert("Your email is unvalid, your email must have @.");
   }
@@ -89,8 +96,12 @@ function ValidNumber() {
     if (too > 0) {
       alert("Your phone is invalid");
     } else {
-      console.log("nice");
-      chuhal += 1;
+      if (NValue == koshka) {
+        console.log("nice");
+        chuhal += 1;
+      } else {
+        alert("Your number is wrong");
+      }
     }
   } else {
     alert(
@@ -108,16 +119,25 @@ function ValidPass() {
         useg += 1;
       }
     }
-    if (useg > 0) {
-      chuhal += 1;
+    if (PValue == parroli) {
+      if (useg > 0) {
+        chuhal += 1;
+      }
+    } else {
+      alert("Your password is wrong");
     }
+
     for (i = 0; i < uildel.length; i++) {
       if (PValue.includes(uildel[i])) {
         too += 1;
       }
     }
-    if (too > 0) {
-      chuhal += 1;
+    if (PValue == parroli) {
+      if (too > 0) {
+        chuhal += 1;
+      }
+    } else {
+      alert("Your password is wrong");
     }
   } else {
     alert("Your password is unvalid, it must have 8 total numbers and letters");

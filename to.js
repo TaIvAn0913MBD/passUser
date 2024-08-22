@@ -7,7 +7,10 @@ const back = document.getElementById("back");
 let Nzai = document.getElementById("ner");
 back.onclick = butsah;
 function butsah() {
-  window.location.href = "index.html";
+  if (confirm("are you sure") == true);
+  {
+    window.location.href = "index.html";
+  }
 }
 console.log(ner1);
 Nzai.innerText = "Hello" + " " + ner1.toUpperCase();
@@ -128,6 +131,12 @@ function print() {
     gadna.appendChild(del);
     gadna.appendChild(edit);
     gadna.appendChild(comp);
+    let toollogo = 0;
+    function localca() {
+      localStorage.setItem(toollogo, gadna2);
+      toollogo++;
+    }
+    localca();
     del.addEventListener("click", function () {
       gadna.remove();
     });
